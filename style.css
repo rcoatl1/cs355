@@ -1,0 +1,143 @@
+
+:root{
+    --bg-color:#eee;
+    --bg-color2:#beabab;
+    --txt-color:#643a3a;
+    --border: #806868, 4px, solid;
+    --button-color:#411111;
+    --txt-color2:#933030;
+    
+}
+
+:root[theme='dark'] {
+    --bg-color: #643a3a;
+    --bg-color2:#d0c6c6;
+    --txt-color:#eee;
+    --border:#9f9d9d, 4px, solid;
+    --button-color:#a99d9d;
+    --txt-color2:#f4b8b8;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    transition: background-color 0.5s, color 0.5s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 2rem;
+}
+
+#image1 {
+    width: 30em;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+
+#image2{
+    display:flex;
+    position: absolute;
+    justify-content: right;
+    float: right;
+    height: 40rem;
+    width: 60rem;
+    margin-left: 50em ;
+    border-radius: 4em;
+ 
+
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+p {
+    font-size: 20pt;
+}
+
+label {
+    font-size: 20pt;
+    
+}
+
+input{
+    margin-bottom: 40px;
+    font-size: 25pt;
+    padding: 10px;
+    background-color: var(--bg-color2)
+}
+
+
+#darkMode_Btn {
+    border: none;
+    cursor: pointer;
+    
+
+}
+
+#darkMode_Btn {
+    padding: 25px;
+    border-radius: 20px;
+    margin-left: 92%;
+    margin-top: 5rem;
+}
+
+#submitBtn, #resetBtn {
+    border-radius: 20px;
+    padding: 15px;
+    align-items: center;
+    margin: 4px;
+    margin-left: 35px;
+    cursor: pointer;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    
+    
+}
+
+#submitBtn:hover {
+    background-color: #806868;
+}
+
+#resetBtn:hover {
+    background-color: #806868;
+}
+
+#form_submitted {
+    font-size: 20pt;
+    padding: 20px;
+}
+
+#secondHeader {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.questions {
+    font-size: 30pt;
+    color: var(--txt-color2);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#backBtn {
+    padding: 15px;
+    font-size: 25pt;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--button-color);
+    margin-top: 20px;
+}
+
+.answers {
+    font-size: 25pt;
+    margin-top: 30px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--txt-color2);
+
+}

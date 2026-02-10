@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPortfolio</title>
+</head>
+<body>
+    <h1>Welcome to UPortfolio</h1>
+    <p>Please Enter the following Information Below</p>
+    <img src="image2.jpg" id="image2">
+    <form id="form" action="page2.html">
+        <label for="name">What is your name?</label><br>
+        <input type="text" name="name" required><br>
+        <br>
+        <label for="birthdate">Date of Birth</label>
+        <br>
+        <input type="date" name="birthdate" min="1900-01-01" max="2014-12-31" required><br>
+        <br>
+        <label for="email">Email Address</label><br>
+        <input type="email" name="email" placeholder="example@gmail.com" required><br>
+        <br>
+        <label for="Bio">Bio</label><br>
+        <input type="text" name="Bio" placeholder="Hi, Hello this is My Bio." required>
+        <br>
+        <br>
+        <input type="submit" id="submitBtn" value="Submit">
+        <input type="reset" id="resetBtn" value="Reset">
+
+    </form>
+    <br>
+    <button id="darkMode_Btn">
+        <i class="fa-solid fa-moon fa-2xl" style="color: #643a3a; font-size: 30pt;"></i>
+    </button>
+</body>
+
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/ce5da04e18.js" crossorigin="anonymous"></script>
+</html>
