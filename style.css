@@ -27,9 +27,9 @@ body{
 }
 
 #image1 {
-    width: 30em;
+    width: 25em;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 45%;
     margin-top: 5%;
 }
 
@@ -39,47 +39,43 @@ body{
     position: absolute;
     justify-content: right;
     float: right;
-    height: 30rem;
-    width: 50rem;
-    margin-left: 50em ;
+    height: 20rem;
+    width: 30rem;
+    margin-left: 30em ;
     border-radius: 4em;
  
 
 }
 
 h1 {
-    font-size: 40pt;
+    font-size: 30pt;
 }
 
 p {
-    font-size: 20pt;
+    font-size: 15pt;
 }
 
 label {
-    font-size: 20pt;
+    font-size: 15pt;
     
 }
 
 input{
     margin-bottom: 40px;
-    font-size: 25pt;
-    padding: 10px;
+    font-size: 15pt;
+    padding: 5px;
     background-color: var(--bg-color2)
 }
 
 
-#darkMode_Btn {
-    border: none;
-    cursor: pointer;
-    
-
-}
 
 #darkMode_Btn {
     padding: 25px;
-    border-radius: 20px;
-    margin-left: 92%;
-    margin-top: 5rem;
+    border-radius: 30px;
+    margin-left: 60%;
+    border: none;
+    cursor: pointer;
+    
 }
 
 #submitBtn, #resetBtn {
