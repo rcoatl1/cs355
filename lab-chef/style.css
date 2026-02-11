@@ -15,6 +15,7 @@ body {
     display: block;
     justify-items: center;
     padding-top: 10vh;
+    position:static;
     
 }
 
