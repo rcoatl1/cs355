@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Chef Bot AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>👨‍🍳 Chef Bot</h1>
+        <p>Enter API KEY here </p>
+        <input type="text" id="api-key-input"
+               placeholder="API key from aistudio.google.com">
+        <p>Enter the ingredients you have, and I'll find a recipe!</p>
+        <input type="text" id="ingredients-input"
+               placeholder="e.g. eggs, spinach, feta">
+        <button onclick="getRecipe()">Generate Recipe</button>
+        <div id="recipe-display"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

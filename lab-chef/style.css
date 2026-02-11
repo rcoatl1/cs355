@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding:0;
+    background-color: rgb(225, 167, 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position:static;
+}
+
+
+
+.container {
+    display: block;
+    justify-items: center;
+    padding-top: 10vh;
+    
+}
+
+.container input {
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 20px;
+}
+
+#api-key-input {
+    width: 40vh;
+}
+
+#ingredients-input{
+    width: 40vh;
+}
+
+.container button {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    width: 20vh;
+    color: rgb(241, 241, 112);
+    background-color: rgb(137, 108, 74);
+    font-size: 12pt;
+    border-radius: 40px;
+    cursor: pointer;
+    border: 4px;
+    border-style:outset;
+}
+
+.container button:hover {
+    background-color: rgb(185, 156, 118);
+    color: beige;
+}
+.container h1 {
+    font-size: 60pt;
+    font-family: "Raleway", sans-serif;
+    color: rgb(114, 49, 2);
+    top:10%;
+
+}
+
+.container p {
+    font-size: 20pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 60px;
+    color: rgb(164, 46, 11);
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#recipe-display {
+    margin-top: 4vh;
+    color: rgba(77, 72, 66, 0.776);
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 2vh;
+}
+
