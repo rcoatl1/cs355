@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs Breed Search</title>
+</head>
+<body>
+    <h1>Dog Breed Search 🐕🦴</h1>
+
+    <label for="breed">Enter Dog Breed:</label><br>
+    <input list="dogBreeds" id="breedInput" placeholder="Search...">
+    <datalist id="dogBreeds"></datalist>
+
+    <br><br>
+    <button id="ImgBtn">Show Images</button>
+    <br>
+    <h2 id="message"></h2>
+    <img id="dogImgs" />
+
+    <script>
+        const breedInput = document.getElementById("breedInput");
+        const breedList = document.getElementById("dogBreeds");
+        const ImgBtn = document.getElementById("ImgBtn");
+        const message = document.getElementById("message");
+        const dogImgs = document.getElementById("dogImgs");
+
+        let breeds = [];
+        let Imginterval = null;
+
+        // 1. Load all breeds for autocomplete
+        fetch("https://dog.ceo/api/breeds/list/all")
+        .then(res => res.json())
+        .then(data => {
+            breeds = Object.keys(data.message);
+
+            breeds.forEach(breed => {
+            const option = document.createElement("option");
+            option.value = breed;
+            breedList.appendChild(option);
+            });
+        });
+
+        // 2. Show images every 5 seconds
+        ImgBtn.addEventListener("click", () => {
+        const breed = breedInput.value.toLowerCase().trim();
+
+        if (Imginterval) clearInterval(Imginterval);
+
+        // Validate breed
+        if (!breeds.includes(breed)) {
+            message.textContent = "No such breed.";
+            dogImgs.style.display = "none";
+            return;
+        }
+
+        message.textContent = "";
+
+        // Function to load a random image
+        function loadImgRandom() {
+            fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
+            .then(res => res.json())
+            .then(data => {
+                dogImgs.src = data.message;
+                dogImgs.style.display = "block";
+            });
+        }
+
+        // Load first image immediately
+        loadImgRandom();
+
+
+        Imginterval = setInterval(loadImgRandom, 5000);
+    });
+  </script>
+
+  <style>
+
+    body {
+        background-color: cornflowerblue;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: aliceblue;
+        padding: 60px;
+        font-size: 25pt;
+    }
+
+    h1 {
+        font-size: 40pt;
+        justify-self: center;
+    }
+
+    #dogImgs {
+        height: 400px;
+        width: 500px;
+        border: 2px solid cornflowerblue;
+
+    }
+
+    #message {
+        color: crimson;
+        font-weight: 400;
+        margin-top: 20px;
+        font-size: 30pt;
+        padding: 20px;
+    }
+    
+    #ImgBtn {
+        background-color: black;
+        color: aqua;
+        border: black;
+        font-size: 12pt;
+        padding: 20px;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+
+    #ImgBtn:active {
+        background-color: darkgrey;
+    }
+
+    #breedInput {
+        padding: 12px;
+        width: 300px;
+        background-color: rgb(223, 212, 212);
+    }
+
+    ::placeholder {
+        font-size: 15pt;
+        color:rgb(127, 129, 129);
+    }
+
+
+  </style>
+
+</body>
+</html>
