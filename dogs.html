@@ -28,7 +28,7 @@
         let breeds = [];
         let Imginterval = null;
 
-        // 1. Load all breeds for autocomplete
+        
         fetch("https://dog.ceo/api/breeds/list/all")
         .then(res => res.json())
         .then(data => {
@@ -41,13 +41,13 @@
             });
         });
 
-        // 2. Show images every 5 seconds
+       
         ImgBtn.addEventListener("click", () => {
         const breed = breedInput.value.toLowerCase().trim();
 
         if (Imginterval) clearInterval(Imginterval);
 
-        // Validate breed
+      
         if (!breeds.includes(breed)) {
             message.textContent = "No such breed.";
             dogImgs.style.display = "none";
@@ -56,7 +56,7 @@
 
         message.textContent = "";
 
-        // Function to load a random image
+        
         function loadImgRandom() {
             fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
             .then(res => res.json())
@@ -66,7 +66,7 @@
             });
         }
 
-        // Load first image immediately
+        
         loadImgRandom();
 
 
